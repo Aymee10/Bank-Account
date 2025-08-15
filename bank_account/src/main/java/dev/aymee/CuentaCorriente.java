@@ -9,27 +9,56 @@ public class CuentaCorriente extends Cuenta{
 
     @Override
     public float consignar(float cantidad) {
-        // TODO Auto-generated method stub
-        return super.consignar(cantidad);
+        if (cantidad <= 0) {
+            System.out.println("ERROR: La cantidad debe ser positiva");
+            return -1;
+        }
+       if (sobregiro > 0) {
+            if (cantidad >= sobregiro) {
+                cantidad -= sobregiro;
+                sobregiro = 0;
+                saldo += cantidad;
+            } else {
+                sobregiro -= cantidad;
+            }
+            consignaciones++;
+            } else {
+            super.consignar(cantidad);
+        }
+       return saldo; 
     }
 
     @Override
     public float extractoMensual() {
-        // TODO Auto-generated method stub
         return super.extractoMensual();
     }
 
     @Override
     public void imprimir() {
-        // TODO Auto-generated method stub
-        super.imprimir();
+        System.out.println("Saldo: " + saldo);
+        System.out.println("Comisión mensual: " + comision_mensual);
+        System.out.println("Transacciones: " + (consignaciones + retiros));
+        System.out.println("Sobregiro: " + sobregiro);
     }
 
     @Override
     public float retirar(float cantidad) {
-        // TODO Auto-generated method stub
-        return super.retirar(cantidad);
+        if (cantidad <= 0) {
+            System.out.println("ERROR: La cantidad debe ser positiva");
+            return -1;
+        }
+        if(cantidad>saldo){
+            sobregiro+=cantidad-saldo;
+            saldo=0;
+            retiros++;
+           
+        }else{
+            super.retirar(cantidad);
+        }
+        return saldo;
+        
     }
+
     
     
 }
