@@ -18,9 +18,9 @@ Este proyecto implementa un sistema de cuentas bancarias con herencia en Java
 ## Tecnologías
 
 - Java 21
-- JUnit 5
+- JUnit 5.12
 - Hamcrest 3.0
-- Maven
+- Maven 21
 
  ## Diagrama de clases
  <img width="565" height="525" alt="diagrama de clases" src="https://github.com/user-attachments/assets/01a759bb-1ed7-4439-8e9c-c64386efcff4" />
