@@ -59,4 +59,25 @@ public class Cuenta {
         System.out.println("Comisión mensual: "+comision_mensual);
     }
 
+    public float getSaldo() {
+        return saldo;
+    }
+
+    public int getConsignaciones() {
+        return consignaciones;
+    }
+
+    public int getRetiros() {
+        return retiros;
+    }
+
+    public float getTasa_anual() {
+        return tasa_anual;
+    }
+
+    public float getComision_mensual() {
+        return comision_mensual;
+    }
+
+    
 }
