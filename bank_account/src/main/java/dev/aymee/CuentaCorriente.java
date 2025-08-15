@@ -59,6 +59,10 @@ public class CuentaCorriente extends Cuenta{
         
     }
 
+    public float getSobregiro() {
+        return sobregiro;
+    }
+
     
     
 }
