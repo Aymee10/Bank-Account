@@ -1,7 +1,7 @@
 package dev.aymee;
 
 public class CuentaAhorro extends Cuenta {
-   protected boolean activa;
+   private boolean activa;
 
     public CuentaAhorro(float saldo, float tasa_anual) {
         super(saldo, tasa_anual);

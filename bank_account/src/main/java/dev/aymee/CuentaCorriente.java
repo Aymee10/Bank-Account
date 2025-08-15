@@ -1,7 +1,7 @@
 package dev.aymee;
 
 public class CuentaCorriente extends Cuenta{
-    protected float sobregiro=0;
+    private float sobregiro=0;
 
     public CuentaCorriente(float saldo, float tasa_anual) {
         super(saldo, tasa_anual);
